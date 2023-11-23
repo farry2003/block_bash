@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "BLOCK_BASH_backend": {
+      "main": "src/BLOCK_BASH_backend/main.mo",
+      "type": "motoko"
+    },
+    "BLOCK_BASH_frontend": {
+      "dependencies": [
+        "BLOCK_BASH_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/BLOCK_BASH_frontend/src/index.html"
+      },
+      "source": [
+        "src/BLOCK_BASH_frontend/assets",
+        "dist/BLOCK_BASH_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
